@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <img src="shield.png" width="200" height="200" />
+  <hr />
+  <h2>Library Charger Check In/Out</h2>
+  <br />
+  <div id="waiting">
+    <p>Here you can check out a charger and take it with you, instead of leaving your computer in the charging station.</p>
+    <br />
+    <p id="check-out-waiting">To check out a charger, please scan your COVID testing barcode, either from the Nobles app or from your email.</p>
+    <p id="check-out-empty" style="display: none">Sorry, there are no chargers available to check out.</p>
+    <br />
+    <p id="check-in-full">No chargers have been checked out.</p>
+    <p id="check-in-waiting" style="display: none">To check a charger back in, please click on your name:</p>
+    <div id="check-in-buttons"></div>
+  </div>
+  <p id="check-out-message" style="display: none"><b id="check-out-name"></b>, please open Box <b><span id="check-out-box"></span></b>, take the charger inside, and close the box <b>gently</b>. Click the button below when finished; otherwise, <u>the box will re-lock in 30 seconds.</u></p>
+  <p id="check-in-message" style="display: none"><b id="check-in-name"></b>, please open Box <b><span id="check-in-box"></span></b>, put your charger back inside, and close the box <b>gently</b>. Click the button below when finished; otherwise, <u>the box will re-lock in 30 seconds.</u></p>
+  <button id="message-button" onclick="fastFinish()" style="display: none">I'm done</button>
+</body>
+</html>
